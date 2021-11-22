@@ -1,0 +1,179 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+.navbar {
+    background-color: #212121;
+    height: 4em;
+    position: fixed;
+    width: 100%;
+}
+
+.navbar-brand {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.875em;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a:hover {
+    color: #ffffff;
+} 
+
+#numberOfProducts {
+    color: #ffffff;
+    padding-right: 0.3em;
+}
+
+.cart {
+    color: #ffffff;
+    float: right;
+    font-size: 1.25em;
+}
+
+img {
+    width: 10em;
+    height: 17em;
+    object-fit: scale-down;
+}
+
+main {
+    display: flex;
+    align-items: center;
+}
+
+.productContainers {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 2em;
+}
+
+.productInfoContainer:nth-child(odd) {
+    background-color: #F5F5F5
+}
+
+.productInfoContainer {
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+    display: inline-block;
+    padding-top: 3em;
+}
+
+p {
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 15em;
+    margin: auto;
+}
+
+.btn-primary {
+    border-radius: 0.5em;
+    text-align: center;
+}
+
+.cart2 {
+    margin: auto;
+    float: left;
+    padding: 0.3em 0.4em;
+    font-size: 1em;
+}
+
+@media only screen 
+and (min-device-width: 768x)
+and (max-device-width: 1024px)
+{
+    .navbar {
+        height: 6em;
+    }
+
+    .navbar-brand{
+        font-size: 2.3em;
+    }
+
+    .users {
+        font-size: 1.5em;
+    }
+
+    #numberOfProducts {
+        font-size: 1.7em;
+    }
+
+    .cart {
+        font-size: 1.5em;
+    }
+
+    img {
+        width: 20em;
+        height: 30em;
+    }
+
+    .productInfoContainer {
+        margin-top: 3em;
+    }
+
+    h1 {
+        font-size: 4em;
+    }
+    
+    p {
+        width: 20em;
+        font-size: 1.5em;
+    }
+
+    .btn-primary {
+        height: 3em;
+        font-size: 1.5em;
+    }
+}
+@media only screen 
+and (min-device-width: 1300px)
+and (max-device-width: 1920px)
+{
+    .navbar {
+        height: 6em;
+    }
+
+    .navbar-brand{
+        font-size: 2.3em;
+    }
+
+    .users {
+        font-size: 1.5em;
+    }
+
+    #numberOfProducts {
+        font-size: 2em;
+    }
+
+    .cart {
+        font-size: 1.5em;
+    }
+
+    img {
+        width: 20em;
+        height: 30em;
+    }
+
+    .productContainers {
+        margin-top: 6em;
+    }
+
+    h1 {
+        font-size: 3.5em;
+    }
+    
+    p {
+        width: 30em;
+        font-size: 2em;
+    }
+
+    .btn-primary {
+        height: 3em;
+        font-size: 1.7em;
+    }
+}
