@@ -80,7 +80,7 @@ if (localStorage.shoppingcart) {
 
 //Adding phone to cart, array and saves it to localstorage.
 function addProduct(product) {
-    var productsCount = 3;
+    var productsCount = 1;
     document.getElementById("productsCount").innerHTML = productsCount + shoppingcart.length;
     shoppingcart.push(product);
     var shoppingcartString = JSON.stringify(shoppingcart);
