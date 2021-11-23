@@ -32,7 +32,7 @@ function cartProducts() {
 
 //Creating number of items in cart.
 function updateCartCounter() {
-    document.getElementById("numberOfProducts").innerHTML = cartItems.length;
+    document.getElementById("productsCount").innerHTML = cartItems.length;
 }
 
 //Function for creating the header.
@@ -126,7 +126,7 @@ function updateTotpris() {
 //Showing that your purchase has been confirmed when clicking the purchase button.
 function purchaseConfirmed() {
     alert("Köp bekräftat");
-    var numberZero = document.getElementById("numberOfProducts");
+    var numberZero = document.getElementById("productsCount");
     numberZero.remove();
     var productRemove = document.getElementById("allProducts");
     productRemove.remove();
@@ -146,4 +146,3 @@ function deletePhone(product) {
     localStorage.shoppingcart = JSON.stringify(cartItems);
     updateCartCounter();
 }
-

@@ -25,43 +25,43 @@ function addProductsToWebpage() {
         productDivs.className = "productContainers";
         for (var i = 0; i < listOfProducts.length; i++) {
             var productInfo = createProductInfo(listOfProducts[i]);
-            productDivs.appendChild(productInfo);      
+            productDivs.appendChild(productInfo);
         }
-        
+
         document.querySelector("main").appendChild(productDivs);
-        
+
 }
 //Counts and shows the number of items in cart.
 function updateCartCounter(){
-    document.getElementById("numberOfProducts").innerHTML = shoppingcart.length;
+    document.getElementById("productsCount").innerHTML = shoppingcart.length;
 }
 
 //Creating each individual phone.
 function createProductInfo(product) {
     var productInfoContainer = document.createElement("div");
     productInfoContainer.className = "productInfoContainer";
-    
+
     var getProductTitle = document.createElement("h1");
     getProductTitle.innerText = product.title;
     productInfoContainer.appendChild(getProductTitle);
-    
+
     var getProductDescription = document.createElement("p");
     getProductDescription.innerText = product.description;
     productInfoContainer.appendChild(getProductDescription);
-    
+
     var getProductImage = document.createElement("img");
     getProductImage.src = "./assets/" + product.image;
     productInfoContainer.appendChild(getProductImage);
-        
+
     var getProductPrice = document.createElement("p");
     getProductPrice.innerText = product.price + " kr";
     productInfoContainer.appendChild(getProductPrice);
-    
+
     var cartButton = document.createElement("button");
     cartButton.className = "btn btn-primary";
     cartButton.setAttribute("id", "addProduct");
-    cartButton.addEventListener("click", function() { 
-        addProduct(product) 
+    cartButton.addEventListener("click", function() {
+        addProduct(product)
     });
     var cartIcon = document.createElement("i");
     cartIcon.className = "cart2 fas fa-cart-arrow-down";
@@ -69,7 +69,7 @@ function createProductInfo(product) {
     var buttonText = document.createTextNode(" Lägg till i kundvagnen");
     cartButton.appendChild(buttonText);
     productInfoContainer.appendChild(cartButton);
-        
+
     return productInfoContainer;
 }
 
@@ -80,10 +80,10 @@ if (localStorage.shoppingcart) {
 
 //Adding phone to cart, array and saves it to localstorage.
 function addProduct(product) {
-    var numberOfProducts = 1;
-    document.getElementById("numberOfProducts").innerHTML = numberOfProducts + shoppingcart.length;
+    var productsCount = 1;
+    document.getElementById("productsCount").innerHTML = productsCount + shoppingcart.length;
     shoppingcart.push(product);
     var shoppingcartString = JSON.stringify(shoppingcart);
     localStorage.shoppingcart = shoppingcartString;
     console.log(localStorage.shoppingcart);
-} 
+}

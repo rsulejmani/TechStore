@@ -21,7 +21,7 @@ a:hover {
     color: #ffffff;
 } 
 
-#numberOfProducts {
+#productsCount {
     color: #ffffff;
     padding-right: 0.3em;
 }
@@ -99,7 +99,7 @@ and (max-device-width: 1024px)
         font-size: 1.5em;
     }
 
-    #numberOfProducts {
+    #productsCount {
         font-size: 1.7em;
     }
 
@@ -146,7 +146,7 @@ and (max-device-width: 1920px)
         font-size: 1.5em;
     }
 
-    #numberOfProducts {
+    #productsCount {
         font-size: 2em;
     }
 
