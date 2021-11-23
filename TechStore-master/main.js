@@ -14,7 +14,7 @@ function loadProducts() {
 }
 
 //Onload function for displaying phones.
-function initSite() {
+function loadWebsite() {
     updateCartCounter();
     loadProducts();
 }
